@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Video Recording | WebRTC</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+
+    <main>
+      <div class="content">
+        <canvas id="canvas"></canvas>
+
+        <!-- videoタグはautoplay属性を付与しないと表示されない -->
+        <video src="" id="video" playsinline controls="true" autoplay></video>
+
+        <video src="" id="recorded" playsinline controls="true" autoplay></video>
+      </div>
+      
+      <div class="menu">
+        <button id="record" class="checkbox">RECORD</button>
+        <button id="play" class="btn">PLAY VIDEO</button>
+        <button id="download" class="btn">DOWNLOAD</button>
+      </div>
+
+      <div class="controls">
+        <button id="stop" class="btn">STOP</button>
+        <button id="front" class="btn">FRONT</button>
+        <button id="rear" class="btn">REAR</button>
+      </div>
+    </main>
+    
+    <script src="./assets/js/libs/clmtrackr.min.js"></script>
+    <script src="./assets/js/libs/emotion_classifier.js"></script>
+    <script src="./assets/js/libs/emotionmodel.js"></script>
+    <script src="./assets/models/model_pca_20_svm.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
